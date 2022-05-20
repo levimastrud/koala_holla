@@ -1,10 +1,10 @@
 CREATE TABLE koala (
-    "id" primary key,
-    "name" varchar(100),
-    "gender" varchar(100),
-    "age" number,
-    "ready_to_transfer" boolean DEFAULT False,
-    "notes"
+  "id" serial primary key,
+  "name" varchar(100),
+  "gender" varchar(100),
+  "age" varchar(10),
+  "ready_to_transfer" boolean DEFAULT False,
+  "notes" varchar(100)
 );
 
 INSERT INTO "koala" ("name", "gender", "age", "ready_to_transfer", "notes")
