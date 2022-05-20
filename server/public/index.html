@@ -5,14 +5,20 @@
     <title>Koalla Holla</title>
     <script src="vendors/jquery-3.3.1.min.js" charset="utf-8"></script>
     <script src="scripts/client.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="views/styles.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
     <header>
+      <div id="both">
       <img src="images/icon.png" class="icon" />
-      <h1>Koala Holla</h1>
+      <h1 id = "title">Koala Holla</h1>
+      </div>
+      <div id = "location">
       <h3>1976 Llama Comma Drive</h2>
       <h3>Walla Walla, WA</h2>
+      </div>
     </header>
     <section id="addKoala">
       <h2>Add Koala</h2>
@@ -23,9 +29,9 @@
       <input type="text" id="notesIn" value="" placeholder="Notes">
       <button type="button" id="addButton">Add Koala</button>
     </section>
-    <section>
+    <section id = "lower">
       <h2>All Koalas</h2>
-      <table>
+      <table id = "koalatable">
         <thead>
           <tr>
             <th>Name</th>
@@ -33,6 +39,8 @@
             <th>Gender</th>
             <th>Ready for Transfer</th>
             <th>Notes</th>
+            <th>Delete</th>
+            <th>Transfer</th>
           </tr>
         </thead>
         <tbody id="viewKoalas">

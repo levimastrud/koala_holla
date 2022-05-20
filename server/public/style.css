@@ -1,0 +1,80 @@
+body {
+    background-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    color: rgb(36, 37, 41)
+}
+
+#title {
+    font-size: 85px;
+    margin: 0;
+}
+
+#both {
+    display: flex;
+}
+
+.icon {
+    height: 80px;
+    width: auto;
+    margin-right: 50px;
+
+}
+
+#location {
+    font-size: 10px;
+}
+
+input {
+    margin: 10px, 10px, 10px, 0px;
+}
+
+header {
+    display: flex;
+    background-color: rgb(65, 108, 237);
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+#koalatable {
+    background-color: beige;
+    padding: 20px;
+    border: 1px solid rgb(144, 149, 112);
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+#koalatable td {
+    padding: 10px;
+    border: 1px solid rgb(144, 149, 112);
+}
+
+#koalatable th {
+    padding: 0px;
+    border: 1px solid rgb(144, 149, 112);
+    padding: 20px;
+    font-size: larger;
+}
+
+button {
+    margin-left: 5px;
+    border: 1px solid rgb(65, 108, 237);
+    border-radius: 5px;
+    color: rgb(65, 108, 237);
+}
+
+button:hover {
+    background-color: rgb(65, 108, 237);
+    color: white;
+}
+
+#lower, #addKoala {
+    margin: 80px;
+}
+
+#addKoala {
+    margin-top: 100px;
+}
