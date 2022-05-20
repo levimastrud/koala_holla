@@ -7,13 +7,12 @@ $(document).ready(function () {
   setupClickListeners()
   // load existing koalas on page load
   getKoalas();
-  $("#viewKoalas").on("click", ".nuke", deleteKoala);
-  $("#viewKoalas").on("click", ".mark", readyToTransfer);
-
 }); // end doc ready
 
 function setupClickListeners() {
   $('#addButton').on('click', saveKoala);
+  $("#viewKoalas").on("click", ".nuke", deleteKoala);
+  $("#viewKoalas").on("click", ".mark", readyToTransfer);
 }
 
 function getKoalas() {
@@ -58,8 +57,8 @@ function saveKoala() {
   console.log('in saveKoala');
   // ajax call to server to get koalas
   let readyLowercase = $('#readyForTransferIn').val().toLowerCase()
-  if (readyLowercase !== 'true' && readyLowercase !== 'false') {
-    alert('Please enter true or false for "Ready for transfer"')
+  if (readyLowercase !== 'yes' && readyLowercase !== 'no') {
+    alert('Please enter yes or no for "Ready for transfer"')
     return
   };
   $.ajax({
@@ -101,7 +100,7 @@ function deleteKoala(event) {
     getKoalas();
     swal({
       icon: 'success',
-      title: 'Thanks for Saving one koala',
+      title: 'Thanks For Saving One Koala',
       text: response
     });
   }).catch(err => {
