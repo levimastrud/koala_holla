@@ -30,7 +30,25 @@ function setupClickListeners() {
 function getKoalas(){
   console.log( 'in getKoalas' );
   // ajax call to server to get koalas
-  
+  $.ajax({
+    method: 'GET',
+    url: '/koalas'
+  }).then(function(response){
+    let koala = response;
+    console.log(koala);
+    for(let i=0; i<koala.length; i++){
+      $('#viewKoalas').append(`
+        <tr>
+          <td>${koala[i].names}</td>
+          <td>${koala[i].age}</td>
+          <td>${koala[i].gender}</td>
+          <td>${koala[i].ready_to_transer}</td>
+          <td>${koala[i].notes}</td>
+        </tr>
+      `)}
+  }).catch(error =>{
+    console.log('ERROR INSERTING KOALA', error);
+  })
 } // end getKoalas
 
 function saveKoala( newKoala ){
